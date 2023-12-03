@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-... (integrity hash)" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const barsIcon = document.getElementById('barsIcon');
+            const sidebarMenu = document.querySelector('.sidebar_menu');
+
+            barsIcon.addEventListener('click', function () {
+                // Toggle the "open" class on the sidebar to show/hide it
+                sidebarMenu.classList.toggle('open');
+
+                // Change the bars icon to times icon and vice versa
+                const isSidebarOpen = sidebarMenu.classList.contains('open');
+                const iconClass = isSidebarOpen ? 'fas fa-times' : 'fas fa-bars';
+                barsIcon.innerHTML = `<i class="${iconClass}"></i>`;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- head mobile -->
+    <header class="mob_head">
+        <div class="bars" id="barsIcon"><i class="fas fa-bars"></i></div>
+        <div class="logo-box">
+            <img src="./assests/logo.jpeg" alt="">
+        </div>
+    </header>
+    <!--  head mobile-->
+
+    <div class="container-fluid cont_custom">
+        <!-- sidebar -->
+        <aside class="sidebar_menu">
+            <div class="logo-box">
+                <img src="./assests/logo.jpeg" alt="">
+            </div>
+            <div class="nav_items">
+                <span class="nav_item">
+                    <i class="fas fa-home"></i>Home
+                </span>
+                <span class="nav_item active">
+                    <i class="fas fa-th-large"></i>Overview
+                </span>
+                <span class="nav_item">
+                    <i class="fas fa-sticky-note"></i>Content
+                </span>
+                <span class="nav_item">
+                    <i class="fas fa-book"></i>Social Marketing
+                </span>
+
+                <span class="nav_item">
+                    <i class="fas fa-user-friends"></i>Email Marketing
+                </span>
+                <span class="nav_item">
+                    <i class="far fa-chart-bar"></i>Advertising
+                </span>
+                <span class="nav_item">
+                    <i class="fas fa-exchange-alt"></i>Customer Acquisition
+                </span>
+                <span class="nav_item">
+                    <i class="far fa-dot-circle"></i>Customer Retention
+                </span>
+                <span class="nav_item">
+                    <i class="fab fa-gg-circle"></i>Custom Goals
+                </span>
+
+                <span class="nav_item">
+                    <i class="fas fa-clipboard"></i>Reports
+                </span>
+                <span class="nav_item">
+                    <i class="fas fa-cog"></i>Settings
+                </span>
+                <span class="nav_item log">
+                    <i class="fas fa-sign-out-alt"></i>Logout
+                </span>
+
+
+            </div>
+        </aside>
+        <!-- sidebar -->
+        <main>
+            <div class="row m-0 row-one">
+                <div class="col-12 col-md-9 dash_main">
+                    <div class="dash_section">
+                        <span class="das_heading">
+                            <h1>Dashboard</h1>
+                            <h4>Marketing Performance</h4>
+                        </span>
+                        <span class="time_date">
+                            <i class="far fa-calendar-alt"></i>14.10.2023-24.10.2023
+                        </span>
+                        <div class="performance_section">
+                            <h4>Performance Overview</h4>
+                            <div class="perf_cards row">
+                                <div class="col-12 col-md-4">
+                                    <div class="per_card red">
+                                        <span class="icon_box">
+                                            <i class="fa-regular fa-user fa"></i>
+                                            <i class="fa-regular fa-user fa two"></i>
+                                        </span>
+                                        <span class="user-no">12,354</span>
+                                        <p class="card_para">Total Website Visitors</p>
+                                        <div class="rate_perc_sec">
+                                            <span>
+                                                <span class="rate_per">12.5%</span>
+                                                <span class="rate_desc">Coversion Rate</span>
+                                            </span>
+                                            <span class="graph_card">
+                                                <img src="./assests/total-visit0graph.jpeg" alt="">
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="per_card green">
+                                        <span class="user-no">$12,354</span>
+                                        <span class="icon_box">USD
+                                        </span>
+
+                                        <p class="card_para">Revenue Generated</p>
+                                        <div class="symbol_line">
+                                            <i class="fa-solid fa-triangle-exclamation fa fa-exclamation-triangle"></i>
+                                            $4.567
+                                        </div>
+                                        <div class="card_symbol_graph">
+                                            <img src="./assests/rev-gen-garph.jpeg" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="per_card yellow">
+                                        <span class="user-no">18.5%</span>
+                                        </span>
+
+                                        <p class="card_para">ROI</p>
+                                        <div class="symbol_line">
+                                            <i
+                                                class="fa-solid fa-triangle-exclamation fa-exclamation-triangle fa"></i>2.3%
+                                        </div>
+                                        <div class="card_symbol_graph">
+                                            <img src="./assests/roi-graph.jpeg" alt="">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="conversion_fun_section row">
+                            <div class="col-12 col-md-3">
+                                <div class="con_fun_progress_graph">
+                                    <img src="./assests/trafic-src.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <div class="con_fun_progress_section">
+                                    <span class="head_sec">
+                                        Conversion Funnel
+                                    </span>
+                                    <span class="progress_bg">
+                                        <span class="progree_number" style="width: 65%;"></span>
+                                        <span class="progress_type">Visitors</span>
+                                        <span class="progress_users">12,345</span>
+                                    </span>
+                                    <span class="progress_bg">
+                                        <span class="progree_number" style="width: 50%;"></span>
+                                        <span class="progress_type">Leads</span>
+                                        <span class="progress_users">642</span>
+                                    </span>
+                                    <span class="progress_bg">
+                                        <span class="progree_number" style="width: 40%;"></span>
+                                        <span class="progress_type">Sign-ups</span>
+                                        <span class="progress_users">345</span>
+                                    </span>
+                                    <span class="progress_bg">
+                                        <span class="progree_number" style="width: 30%;"></span>
+                                        <span class="progress_type">Purchases</span>
+                                        <span class="progress_users">145</span>
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content_perf_section">
+                            <span class="content-per_head">Content Performance <span class="top_per">Top-performing
+                                    Content</span></span>
+                            <div class="content_per_title_row">
+                                <span class="title_name">Content Title</span>
+                                <span class="title_name ps-3">Page Views</span>
+                                <span class="title_name">Bounce Rate</span>
+                                <span class="title_name">Conversion Rate</span>
+                            </div>
+                            <div class="content_per_data_row">
+                                <span class="data_name">Data Driven Marketing...</span>
+                                <span class="data-no ps-2">5,567</span>
+                                <span class="data-no">45%</span>
+                                <span class="data-no">8.2%</span>
+                            </div>
+                            <div class="content_per_data_row two">
+                                <span class="data_name">Biogigging Success:Craf...</span>
+                                <span class="data-no ps-2">5,567</span>
+                                <span class="data-no">45%</span>
+                                <span class="data-no">8.2%</span>
+                            </div>
+                            <div class="content_per_data_row">
+                                <span class="data_name">Digital Marketing Trend...</span>
+                                <span class="data-no ps-2">5,567</span>
+                                <span class="data-no">45%</span>
+                                <span class="data-no">8.2%</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 profile_section">
+                    <div class="profile_head">
+                        <span class="profile_action">
+                            <i class="fa-solid fa-question-circle fa"></i>
+                            <i class="fa-solid fa-bell fa"></i>
+                            <i class="fa-solid fa-face-grin fa-grin fa"></i>
+                        </span>
+                        <span class="profile_close">
+                            <i class="fa-solid fa-xmark fa-times fa"></i>
+                        </span>
+                    </div>
+                    <div class="profile_box_info">
+                        <div class="profile_data">
+                            <span class="name">Anirudh</span>
+                            <span class="designation">Marketing Manager</span>
+                            <span class="logout"><i class="fas fa-sign-out-alt"></i>Logout</span>
+                        </div>
+                        <div class="profile_pic">
+                            <img src="./assests/user-profile.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="rate_desc">
+                        <div class="rate_line">
+                            <span class="rate_haeding">Churn Rate</span>
+                            <span class="rate_amount">7%</span>
+                            <span class="rate_graph"><img src="./assests/churn-graph.jpeg" alt=""></span>
+                        </div>
+                        <div class="rate_line">
+                            <span class="rate_haeding">Customer Lifetime Value(CLV)</span>
+                            <span class="rate_amount">$546</span>
+                            <span class="rate_graph"><img src="./assests/clv-graph.jpeg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="form-boxes">
+                        <span class="form_box green">
+                            <span class="form_no">
+                                450
+                            </span>
+                            <span class="form_label">Form</span>
+                            <span class="form_desc">Submission</span>
+                            <div class="form_last">
+                                <span class="form_line"></span>
+
+                            </div>
+                        </span>
+                        <span class="form_box orange">
+                            <span class="form_no">
+                                320
+                            </span>
+                            <span class="form_label">E-book</span>
+                            <span class="form_desc">Downloads</span>
+                            <div class="form_last">
+                                <span class="form_line"></span>
+
+                            </div>
+                        </span>
+
+                    </div>
+                    <div class="alerts_section">
+                        <span class="heading_alerts">Alerts</span>
+                        <div class="alert_box red">
+                            <span class="alert_box_icon_head"><i class="fas fa-chart-line"></i>Conversion Dip</span>
+                            <span class="alert_box_desc">Corendon ruchowo mopped agrificantly, Investigare and cet now
+                            </span>
+                        </div>
+                        <div class="alert_box yellow">
+                            <span class="alert_box_icon_head"><i class="fas fa-archive"></i>Low Inventory</span>
+                            <span class="alert_box_desc">Popular duetunning w KRSTIDEK MÜÜNİ
+                            </span>
+                        </div>
+                        <div class="alert_box green">
+                            <span class="alert_box_icon_head"><i class="fas fa-cogs"></i>Social Buzz</span>
+                            <span class="alert_box_desc">Brand mertons surging on social media Encage with buctores
+                            </span>
+                        </div>
+                        <span class="see-all"><a href="#">See all</a><i class="fas fa-caret-right"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

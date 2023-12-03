@@ -1,0 +1,586 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.cont_custom {
+  padding: 0;
+  display: grid;
+  grid-template-areas: "sidebar main";
+  grid-template-columns: 1fr 5fr;
+  gap: 0.1rem;
+  max-width: 1920px;
+  .sidebar_menu {
+    width: 300px;
+    border-right: 2px solid #dadada;
+    // position: sticky;
+    // height: 100vh;
+    // overflow-y: auto;
+    .logo-box {
+      width: 200px;
+      padding: 20px 24px 40px;
+      img {
+        max-width: 90%;
+      }
+    }
+    .nav_items {
+      padding: 0 24px;
+      .nav_item {
+        color: grey;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        display: block;
+        border-radius: 4px;
+        cursor: pointer;
+        &.log {
+          color: #318a4c;
+        }
+        i {
+          margin-right: 15px;
+        }
+        &.active {
+          color: #fff;
+          background-color: #378c46;
+          padding: 7px 10px;
+        }
+      }
+    }
+  }
+  main {
+    .row-one {
+      height: 100%;
+    }
+    .dash_main {
+      position: relative;
+      // background: linear-gradient(to top right, #fcf1f5, #fef6eb );
+      background-color: white;
+      /* Create pseudo-elements for the top right and bottom left sections */
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        display: none;
+      }
+
+      /* Apply the gradient to the pseudo-elements */
+      &::before {
+        background: linear-gradient(to top right, transparent, #fef6eb);
+        width: 400px;
+        top: 0;
+        right: 0;
+        height: 400px;
+      }
+
+      &::after {
+        background: linear-gradient(to bottom left, transparent, #fcf1f5);
+        width: 400px;
+        bottom: 0;
+        left: 0;
+        height: 400px;
+      }
+    }
+    .dash_section {
+      padding: 20px 5px;
+      height: 100%;
+      .das_heading {
+        display: flex;
+        align-items: center;
+        h1 {
+          font-weight: 700;
+          margin-right: 10px;
+          font-size: 2rem;
+        }
+        h4 {
+          font-size: 1.1rem;
+        }
+      }
+      .time_date {
+        font-weight: 500;
+        margin-top: 5px;
+        display: block;
+        i {
+          margin-right: 11px;
+          font-size: 20px;
+        }
+      }
+      .performance_section {
+        margin-top: 20px;
+        .perf_cards {
+          .per_card {
+            border-radius: 10px;
+            padding: 15px 10px 10px 15px;
+            height: 100%;
+            position: relative;
+            .card_symbol_graph {
+              height: 50px;
+              position: absolute;
+              bottom: 2px;
+              left: 1px;
+              img {
+                height: 100%;
+                // width: 200px;
+              }
+            }
+            .graph_card {
+              height: 50px;
+              position: absolute;
+              bottom: 1px;
+              right: 20px;
+              img {
+                height: 100%;
+                // width: 200px;
+              }
+            }
+            .icon_box {
+              background-color: white;
+              padding: 4px 4px 4px 6px;
+              border: 1px solid #cccc;
+              border-radius: 8px;
+              margin-right: 15px;
+              .two {
+                position: relative;
+                right: 12px;
+                margin-right: -14px;
+              }
+            }
+            .user-no {
+              font-size: 1.6rem;
+              font-weight: 800;
+            }
+            .card_para {
+              color: grey;
+              font-size: 15px;
+              font-weight: 500;
+              margin-bottom: 25px;
+            }
+            .rate_perc_sec {
+              display: flex;
+              justify-content: space-between;
+              .rate_per {
+                font-size: 1.5rem;
+                font-weight: 800;
+                display: block;
+              }
+              .rate_desc {
+                color: grey;
+                font-size: 14.5px;
+                font-weight: 500;
+                margin-top: -2px;
+                display: block;
+              }
+            }
+            &.red {
+              background-color: #fcefe9;
+            }
+            &.green {
+              background-color: #ecf2e8;
+              .card_para {
+                margin-bottom: 0;
+              }
+
+              .icon_box {
+                margin-right: 0;
+                position: relative;
+                right: -33px;
+                padding: 2px 13px;
+                font-size: 14px;
+                bottom: 6px;
+                border: none;
+                font-weight: 500;
+              }
+              .symbol_line {
+                font-weight: 700;
+                font-size: 14px;
+                i {
+                  color: #1cc9ab;
+                }
+                .icon_box {
+                  font-weight: 500;
+                }
+              }
+            }
+            &.yellow {
+              background-color: #fdefd4;
+              .card_para {
+                margin-bottom: 0;
+              }
+
+              .symbol_line {
+                font-weight: 700;
+                font-size: 14px;
+
+                i {
+                  color: #e78e1a;
+                  margin-right: 5px;
+                  transform: rotateX(180deg);
+                }
+              }
+            }
+          }
+        }
+      }
+      .conversion_fun_section {
+        margin-top: 24px;
+        .con_fun_progress_graph {
+          background-color: #fff;
+          border-radius: 6px;
+          box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 7%);
+          padding: 12px 15px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          img {
+            width: 100%;
+            // height: 100%;
+          }
+        }
+        .con_fun_progress_section {
+          background-color: #fff;
+          border-radius: 6px;
+          box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 7%);
+          padding: 12px 15px;
+          .head_sec {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+          }
+          .progress_bg {
+            height: 30px;
+            display: block;
+            border-radius: 4px;
+            background-color: #fef3f7;
+            position: relative;
+            margin-bottom: 10px;
+            .progree_number {
+              height: 30px;
+              border-radius: 4px;
+              background-color: #318a4c;
+              display: block;
+            }
+            .progress_type {
+              color: #fff;
+              font-weight: 500;
+              position: absolute;
+              top: 3px;
+              left: 8px;
+            }
+            .progress_users {
+              position: absolute;
+              right: 0;
+              bottom: -1px;
+              right: 0px;
+              background: white;
+              /* height: 22px; */
+              padding: 0px 12px;
+              line-height: 32px;
+              /* margin-top: -27px; */
+              font-weight: 700;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .content_perf_section {
+        margin-top: 24px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 7%);
+        padding: 12px 15px;
+
+        .content-per_head {
+          font-weight: 700;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          display: block;
+          text-align: center;
+          .top_per {
+            font-size: 0.9rem;
+            color: gray;
+            font-weight: 500;
+          }
+        }
+        .content_per_title_row {
+          color: gray;
+          font-weight: 500;
+          font-size: 15px;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          .title_name {
+            width: 25%;
+            display: inline-block;
+          }
+        }
+        .content_per_data_row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 6px;
+          .data_name {
+            display: inline-block;
+            background-color: #fff;
+            width: 25%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #000;
+            margin-right: 15px;
+          }
+          .data-no {
+            display: inline-block;
+            background-color: #f5edeb;
+            width: 25%;
+            color: gray;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 1.5px 0;
+          }
+          &.two {
+            .data-no {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .profile_section {
+      padding: 20px 10px 20px 10px;
+      border-left: 2px solid #dadada;
+      .profile_head {
+        display: flex;
+        justify-content: space-between;
+        .profile_action {
+          i {
+            margin-right: 10px;
+            color: #c0c0c0;
+            &.fa-grin {
+              color: #f1cac3;
+            }
+          }
+        }
+        .profile_close {
+          i {
+            color: gray;
+          }
+        }
+      }
+      .profile_box_info {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+        width: 90%;
+        .profile_data {
+          .name {
+            font-weight: 700;
+            display: block;
+          }
+          .designation {
+            color: gray;
+            font-size: 0.8rem;
+          }
+          .logout {
+            display: block;
+            font-size: 0.9rem;
+            color: #8e5065;
+            i {
+              margin-right: 5px;
+            }
+          }
+        }
+        .profile_pic {
+          img {
+            width: 50px;
+            margin-top: 4px;
+            border-radius: 10px;
+          }
+        }
+      }
+      .rate_desc {
+        margin-top: 24px;
+        .rate_line {
+          padding-top: 10px;
+        }
+        .rate_haeding {
+          color: gray;
+          font-weight: 500;
+          font-size: 0.85rem;
+          padding-bottom: 10px;
+          display: block;
+        }
+        .rate_amount {
+          font-weight: 600;
+          font-size: 1.5rem;
+        }
+      }
+      .form-boxes {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        .form_box {
+          display: inline-block;
+          border-radius: 10px;
+          padding: 10px 18px 10px 18px;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+          &.green {
+            background-color: #37ae4f;
+            margin-right: 9px;
+          }
+          &.orange {
+            background-color: #ef9f2f;
+          }
+          .form_no {
+            display: block;
+            color: #fff;
+            font-weight: 700;
+            font-size: 2rem;
+            padding-bottom: 10px;
+          }
+          .form_label {
+            display: block;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 15px;
+          }
+          .form_desc {
+            display: block;
+            color: navy;
+            font-size: 0.8rem;
+          }
+          .form_last {
+            text-align: center;
+            height: 7px;
+
+            .form_line {
+              background-color: #fff;
+              height: 5px;
+              display: inline-block;
+              width: 55px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .alerts_section {
+        margin-top: 35px;
+        .heading_alerts {
+          display: block;
+          font-weight: 800;
+          font-size: 1.3rem;
+        }
+        .alert_box {
+          border-radius: 6px;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          padding: 10px 12px;
+          margin-bottom: 13px;
+          &.red {
+            i {
+              color: #985a6d;
+            }
+          }
+          &.yellow {
+            i {
+              color: #e4c499;
+            }
+          }
+          &.green {
+            i {
+              color: #6ff1db;
+            }
+          }
+          .alert_box_icon_head {
+            font-weight: 600;
+            display: block;
+            font-size: 0.9rem;
+            i {
+              margin-right: 10px;
+              font-size: 20px;
+            }
+          }
+          .alert_box_desc {
+            font-size: 0.8rem;
+            color: gray;
+          }
+        }
+        .see-all {
+          color: #a7694a;
+          font-size: 15px;
+          display: block;
+          text-align: end;
+          a {
+            text-decoration: none;
+            color: #a7694a;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.mob_head {
+  display: none;
+  justify-content: space-between;
+  padding: 12px 21px;
+  border-bottom: 1px solid #dadada;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: white;
+  width: 100%;
+  align-items: center;
+  .logo-box {
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar_menu {
+    display: none;
+    .logo-box {
+      display: none;
+    }
+  }
+
+  /* Add styles for the open sidebar */
+  .sidebar_menu.open {
+    display: block;
+    position: fixed;
+    background: white;
+    z-index: 1;
+    top: 30px;
+  }
+
+  /* Add transition for smooth animation */
+  .sidebar_menu {
+    transition: 0.4s ease-in-out;
+  }
+  main {
+    padding-top: 70px;
+    .dash_section {
+      .das_heading {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin-bottom: 15px;
+      }
+      .performance_section {
+        .perf_cards {
+          .col-md-4 {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .cont_custom {
+    display: block;
+  }
+}

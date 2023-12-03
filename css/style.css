@@ -1,0 +1,548 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.cont_custom {
+  padding: 0;
+  display: grid;
+  grid-template-areas: "sidebar main";
+  grid-template-columns: 1fr 5fr;
+  gap: 0.1rem;
+}
+.cont_custom .sidebar_menu {
+  width: 300px;
+  border-right: 2px solid #dadada;
+}
+.cont_custom .sidebar_menu .logo-box {
+  width: 200px;
+  padding: 20px 24px 40px;
+}
+.cont_custom .sidebar_menu .logo-box img {
+  max-width: 90%;
+}
+.cont_custom .sidebar_menu .nav_items {
+  padding: 0 24px;
+}
+.cont_custom .sidebar_menu .nav_items .nav_item {
+  color: grey;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cont_custom .sidebar_menu .nav_items .nav_item.log {
+  color: #318a4c;
+}
+.cont_custom .sidebar_menu .nav_items .nav_item i {
+  margin-right: 15px;
+}
+.cont_custom .sidebar_menu .nav_items .nav_item.active {
+  color: #fff;
+  background-color: #378c46;
+  padding: 7px 10px;
+}
+.cont_custom main .row-one {
+  height: 100%;
+}
+.cont_custom main .dash_main {
+  position: relative;
+  background-color: white;
+  /* Create pseudo-elements for the top right and bottom left sections */
+  /* Apply the gradient to the pseudo-elements */
+}
+.cont_custom main .dash_main::before, .cont_custom main .dash_main::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  display: none;
+}
+.cont_custom main .dash_main::before {
+  background: linear-gradient(to top right, transparent, #fef6eb);
+  width: 400px;
+  top: 0;
+  right: 0;
+  height: 400px;
+}
+.cont_custom main .dash_main::after {
+  background: linear-gradient(to bottom left, transparent, #fcf1f5);
+  width: 400px;
+  bottom: 0;
+  left: 0;
+  height: 400px;
+}
+.cont_custom main .dash_section {
+  padding: 20px 5px;
+  height: 100%;
+}
+.cont_custom main .dash_section .das_heading {
+  display: flex;
+  align-items: center;
+}
+.cont_custom main .dash_section .das_heading h1 {
+  font-weight: 700;
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.cont_custom main .dash_section .das_heading h4 {
+  font-size: 1.1rem;
+}
+.cont_custom main .dash_section .time_date {
+  font-weight: 500;
+  margin-top: 5px;
+  display: block;
+}
+.cont_custom main .dash_section .time_date i {
+  margin-right: 11px;
+  font-size: 20px;
+}
+.cont_custom main .dash_section .performance_section {
+  margin-top: 20px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card {
+  border-radius: 10px;
+  padding: 15px 10px 10px 15px;
+  height: 100%;
+  position: relative;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .card_symbol_graph {
+  height: 50px;
+  position: absolute;
+  bottom: 2px;
+  left: 1px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .card_symbol_graph img {
+  height: 100%;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .graph_card {
+  height: 50px;
+  position: absolute;
+  bottom: 1px;
+  right: 20px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .graph_card img {
+  height: 100%;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .icon_box {
+  background-color: white;
+  padding: 4px 4px 4px 6px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .icon_box .two {
+  position: relative;
+  right: 12px;
+  margin-right: -14px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .user-no {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .card_para {
+  color: grey;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .rate_perc_sec {
+  display: flex;
+  justify-content: space-between;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .rate_perc_sec .rate_per {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: block;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card .rate_perc_sec .rate_desc {
+  color: grey;
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-top: -2px;
+  display: block;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.red {
+  background-color: #fcefe9;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.green {
+  background-color: #ecf2e8;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.green .card_para {
+  margin-bottom: 0;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.green .icon_box {
+  margin-right: 0;
+  position: relative;
+  right: -33px;
+  padding: 2px 13px;
+  font-size: 14px;
+  bottom: 6px;
+  border: none;
+  font-weight: 500;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.green .symbol_line {
+  font-weight: 700;
+  font-size: 14px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.green .symbol_line i {
+  color: #1cc9ab;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.green .symbol_line .icon_box {
+  font-weight: 500;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.yellow {
+  background-color: #fdefd4;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.yellow .card_para {
+  margin-bottom: 0;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.yellow .symbol_line {
+  font-weight: 700;
+  font-size: 14px;
+}
+.cont_custom main .dash_section .performance_section .perf_cards .per_card.yellow .symbol_line i {
+  color: #e78e1a;
+  margin-right: 5px;
+  transform: rotateX(180deg);
+}
+.cont_custom main .dash_section .conversion_fun_section {
+  margin-top: 24px;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_graph {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+  padding: 12px 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_graph img {
+  width: 100%;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_section {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+  padding: 12px 15px;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_section .head_sec {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_section .progress_bg {
+  height: 30px;
+  display: block;
+  border-radius: 4px;
+  background-color: #fef3f7;
+  position: relative;
+  margin-bottom: 10px;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_section .progress_bg .progree_number {
+  height: 30px;
+  border-radius: 4px;
+  background-color: #318a4c;
+  display: block;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_section .progress_bg .progress_type {
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: 3px;
+  left: 8px;
+}
+.cont_custom main .dash_section .conversion_fun_section .con_fun_progress_section .progress_bg .progress_users {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  right: 0px;
+  background: white;
+  /* height: 22px; */
+  padding: 0px 12px;
+  line-height: 32px;
+  /* margin-top: -27px; */
+  font-weight: 700;
+  display: inline-block;
+}
+.cont_custom main .dash_section .content_perf_section {
+  margin-top: 24px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+  padding: 12px 15px;
+}
+.cont_custom main .dash_section .content_perf_section .content-per_head {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+.cont_custom main .dash_section .content_perf_section .content-per_head .top_per {
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 500;
+}
+.cont_custom main .dash_section .content_perf_section .content_per_title_row {
+  color: gray;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.cont_custom main .dash_section .content_perf_section .content_per_title_row .title_name {
+  width: 25%;
+  display: inline-block;
+}
+.cont_custom main .dash_section .content_perf_section .content_per_data_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.cont_custom main .dash_section .content_perf_section .content_per_data_row .data_name {
+  display: inline-block;
+  background-color: #fff;
+  width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #000;
+  margin-right: 15px;
+}
+.cont_custom main .dash_section .content_perf_section .content_per_data_row .data-no {
+  display: inline-block;
+  background-color: #f5edeb;
+  width: 25%;
+  color: gray;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 1.5px 0;
+}
+.cont_custom main .dash_section .content_perf_section .content_per_data_row.two .data-no {
+  background-color: #fff;
+}
+.cont_custom main .profile_section {
+  padding: 20px 10px 20px 10px;
+  border-left: 2px solid #dadada;
+}
+.cont_custom main .profile_section .profile_head {
+  display: flex;
+  justify-content: space-between;
+}
+.cont_custom main .profile_section .profile_head .profile_action i {
+  margin-right: 10px;
+  color: #c0c0c0;
+}
+.cont_custom main .profile_section .profile_head .profile_action i.fa-grin {
+  color: #f1cac3;
+}
+.cont_custom main .profile_section .profile_head .profile_close i {
+  color: gray;
+}
+.cont_custom main .profile_section .profile_box_info {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  width: 90%;
+}
+.cont_custom main .profile_section .profile_box_info .profile_data .name {
+  font-weight: 700;
+  display: block;
+}
+.cont_custom main .profile_section .profile_box_info .profile_data .designation {
+  color: gray;
+  font-size: 0.8rem;
+}
+.cont_custom main .profile_section .profile_box_info .profile_data .logout {
+  display: block;
+  font-size: 0.9rem;
+  color: #8e5065;
+}
+.cont_custom main .profile_section .profile_box_info .profile_data .logout i {
+  margin-right: 5px;
+}
+.cont_custom main .profile_section .profile_box_info .profile_pic img {
+  width: 50px;
+  margin-top: 4px;
+  border-radius: 10px;
+}
+.cont_custom main .profile_section .rate_desc {
+  margin-top: 24px;
+}
+.cont_custom main .profile_section .rate_desc .rate_line {
+  padding-top: 10px;
+}
+.cont_custom main .profile_section .rate_desc .rate_haeding {
+  color: gray;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding-bottom: 10px;
+  display: block;
+}
+.cont_custom main .profile_section .rate_desc .rate_amount {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.cont_custom main .profile_section .form-boxes {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.cont_custom main .profile_section .form-boxes .form_box {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 18px 10px 18px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+.cont_custom main .profile_section .form-boxes .form_box.green {
+  background-color: #37ae4f;
+  margin-right: 9px;
+}
+.cont_custom main .profile_section .form-boxes .form_box.orange {
+  background-color: #ef9f2f;
+}
+.cont_custom main .profile_section .form-boxes .form_box .form_no {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+.cont_custom main .profile_section .form-boxes .form_box .form_label {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 15px;
+}
+.cont_custom main .profile_section .form-boxes .form_box .form_desc {
+  display: block;
+  color: navy;
+  font-size: 0.8rem;
+}
+.cont_custom main .profile_section .form-boxes .form_box .form_last {
+  text-align: center;
+  height: 7px;
+}
+.cont_custom main .profile_section .form-boxes .form_box .form_last .form_line {
+  background-color: #fff;
+  height: 5px;
+  display: inline-block;
+  width: 55px;
+  text-align: center;
+}
+.cont_custom main .profile_section .alerts_section {
+  margin-top: 35px;
+}
+.cont_custom main .profile_section .alerts_section .heading_alerts {
+  display: block;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.cont_custom main .profile_section .alerts_section .alert_box {
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 10px 12px;
+  margin-bottom: 13px;
+}
+.cont_custom main .profile_section .alerts_section .alert_box.red i {
+  color: #985a6d;
+}
+.cont_custom main .profile_section .alerts_section .alert_box.yellow i {
+  color: #e4c499;
+}
+.cont_custom main .profile_section .alerts_section .alert_box.green i {
+  color: #6ff1db;
+}
+.cont_custom main .profile_section .alerts_section .alert_box .alert_box_icon_head {
+  font-weight: 600;
+  display: block;
+  font-size: 0.9rem;
+}
+.cont_custom main .profile_section .alerts_section .alert_box .alert_box_icon_head i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.cont_custom main .profile_section .alerts_section .alert_box .alert_box_desc {
+  font-size: 0.8rem;
+  color: gray;
+}
+.cont_custom main .profile_section .alerts_section .see-all {
+  color: #a7694a;
+  font-size: 15px;
+  display: block;
+  text-align: end;
+}
+.cont_custom main .profile_section .alerts_section .see-all a {
+  text-decoration: none;
+  color: #a7694a;
+  margin-right: 5px;
+}
+
+.mob_head {
+  display: none;
+  justify-content: space-between;
+  padding: 12px 21px;
+  border-bottom: 1px solid #dadada;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: white;
+  width: 100%;
+  align-items: center;
+}
+.mob_head .logo-box {
+  width: 100px;
+}
+.mob_head .logo-box img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .mob_head {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar_menu {
+    display: none;
+  }
+  .sidebar_menu .logo-box {
+    display: none;
+  }
+  /* Add styles for the open sidebar */
+  .sidebar_menu.open {
+    display: block;
+    position: fixed;
+    background: white;
+    z-index: 1;
+    top: 30px;
+  }
+  /* Add transition for smooth animation */
+  .sidebar_menu {
+    transition: 0.4s ease-in-out;
+  }
+  main {
+    padding-top: 70px;
+  }
+  main .dash_section .das_heading {
+    flex-direction: column;
+    align-items: flex-start !important;
+    margin-bottom: 15px;
+  }
+  main .dash_section .performance_section .perf_cards .col-md-4 {
+    margin-bottom: 15px;
+  }
+  .cont_custom {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
