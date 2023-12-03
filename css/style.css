@@ -8,6 +8,7 @@ body {
   grid-template-areas: "sidebar main";
   grid-template-columns: 1fr 5fr;
   gap: 0.1rem;
+  max-width: 1920px;
 }
 .cont_custom .sidebar_menu {
   width: 300px;
@@ -523,7 +524,7 @@ body {
     position: fixed;
     background: white;
     z-index: 1;
-    top: 30px;
+    top: 65px;
   }
   /* Add transition for smooth animation */
   .sidebar_menu {
